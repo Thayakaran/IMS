@@ -35,12 +35,11 @@
             <section class="login_content">
                 <form>
                     <h1>Login Form</h1>
-                    <div>
-              <span style="float: left; margin-left: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="student"
-                                                                                        checked> Student</span>
-                        <span style="margin-bottom: 20px;"><input type="radio" name="user" value="company"> Company</span>
-                        <span style="margin-bottom: 20px; margin-left: 20px;"><input type="radio" name="user" value="examiner"> Examiner</span>
-                        <span style="float: right; margin-right: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="itm">                ITM</span>
+                    <div class="flat">
+                        <span style="float: left; margin-left: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="student" class="flat"> Student</span>
+                        <span style="margin-bottom: 20px;"><input type="radio" name="user" value="company" class="flat"> Company</span>
+                        <span style="margin-bottom: 20px; margin-left: 20px;"><input type="radio" name="user" value="examiner" class="flat"> Examiner</span>
+                        <span style="float: right; margin-right: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="itm" class="flat">ITM</span>
                     </div>
                     <br>
                     <div>
@@ -69,11 +68,17 @@
                             event.preventDefault();
                             var data = {};
 
+                            data.type = $("input[type='radio'].flat:checked").val();
+
                             data.email = $("#email").val();
                             data.password = $("#password").val();
 
                             if (data.email.trim() == "" || data.password == "") {
-                                swal({title: "Error", text: "Email and Password are Required!", type: "error"});
+
+
+                                    swal({title: "Error", text: " Email and Password are Required!" , type: "error"});
+
+
                                 return;
                             }
                             $.ajax({
@@ -89,7 +94,11 @@
                                     else {
                                         localStorage.setItem('token', res.token);
                                         localStorage.setItem('name', res.name);
-                                        window.location.href = "../index.html";
+                                        if(data.type == "student")
+                                        {
+                                            window.location.href = "signup.html";
+                                        }
+
                                     }
                                 }
                             });

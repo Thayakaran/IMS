@@ -11,7 +11,7 @@ const UserSchema = mongoose.model('user');
 module.exports.login = function (user, callback) {
     var pass  = hash(user.password+configs.salt);
 
-    UserSchema.find({email:user.email, password:pass}).exec().then(function (doc) {
+    UserSchema.find({type:user.type ,email:user.email, password:pass }).exec().then(function (doc) {
         if (doc.length < 1){
             callback("Invalid User");
         }
