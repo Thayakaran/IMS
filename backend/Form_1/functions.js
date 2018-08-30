@@ -22,7 +22,7 @@ module.exports.submit_form1 = function (form1, callback) {
         st_year:form1.st_year,
         st_cgpa:form1.st_cgpa,
         e_name:form1.e_name,
-        e_address:form1.emit.e_address,
+        e_address:form1.e_address,
         su_name:form1.su_name,
         su_phone:form1.su_phone,
         su_title:form1.su_title,
