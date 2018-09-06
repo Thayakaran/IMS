@@ -9,6 +9,7 @@ const route_test = require('./backend/Testing_MGMT/routes');
 
 const route_registgration = require('./backend/Registration/router_registration');
 const route_login = require('./backend/Login/router_login');
+const route_form3 = require('./backend/Form3/router_form3');
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(__dirname));
 
 app.use(route_registgration)
 app.use(route_login)
+app.use('/' ,route_form3);
 
 app.use('/' , route_test);
 app.get('/', function(req, res) {
