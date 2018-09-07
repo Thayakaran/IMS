@@ -1,6 +1,5 @@
 const mongoose = require('../Configs/DBSchema_employee');
 const configs = require('../Configs/configs');
-const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const request = require('request');
 const UserSchema = mongoose.model('user');
