@@ -1,100 +1,154 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <!-- Meta, title, CSS, favicons, etc. -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>IMS | Login</title>
+    <title>Gentelella Alela! | </title>
 
-  <!-- Bootstrap -->
-  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <!-- NProgress -->
-  <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-  <!-- Animate.css -->
-  <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
-  <!-- Custom Theme Style -->
-  <link href="build/css/custom.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+    <script src="../sweetalert2.all.min.js"></script>
+    <script src="production/js/jquery.min.js"></script>
 </head>
 
 <body class="login">
-  <div>
+<div>
     <a class="hiddenanchor" id="signup"></a>
     <a class="hiddenanchor" id="signin"></a>
 
     <div class="login_wrapper">
-      <div class="animate form login_form">
-        <section class="login_content">
-          <form>
-            <h1>IMS - Login</h1>
-            <div>
-              <span style="float: left; margin-left: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="student"
-                  checked> Student</span>
-              <span style="margin-bottom: 20px;"><input type="radio" name="user" value="company"> Company</span>
-              <span style="margin-bottom: 20px; margin-left: 20px;"><input type="radio" name="user" value="examiner"> Examiner</span>
-              <span style="float: right; margin-right: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="itm">                ITM</span>
-            </div>
-            <br>
-            <div>
-              <input type="text" class="form-control" placeholder="email" required="" />
-            </div>
-            <div>
-              <input type="password" class="form-control" placeholder="Password" required="" />
-            </div>
-            <div>
-              <a class="btn btn-default submit" href="../index.html">Log in</a>
-              <a class="reset_pass" href="#">Lost your password?</a>
-            </div>
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form>
+                    <h1>Login Form</h1>
+                    <div class="flat">
+                        <span style="float: left; margin-left: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="student" class="flat"> Student</span>
+                        <span style="margin-bottom: 20px;"><input type="radio" name="user" value="company" class="flat"> Company</span>
+                        <span style="margin-bottom: 20px; margin-left: 20px;"><input type="radio" name="user" value="examiner" class="flat"> Examiner</span>
+                        <span style="float: right; margin-right: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="itm" class="flat">ITM</span>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Username" id="email" required="" />
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="Password" id= "password" required="" />
+                    </div>
+                    <div>
+                        <a class="btn btn-default submit" id="login" >Log in</a>
+                        <a class="reset_pass" href="#">Lost your password?</a>
+                        <a class="reset_pass" href="registration.html">New to IMS System??</a>
+                    </div>
 
-            <div class="clearfix"></div>
+                    <div class="clearfix"></div>
 
-          </form>
-        </section>
-      </div>
+                </form>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        if (localStorage.getItem('token')) {
+                            window.location.href = "index.html";
+                            return;
+                        }
 
-      <div id="register" class="animate form registration_form">
-        <section class="login_content">
-          <form>
-            <h1>Create Account</h1>
-            <div>
-              <input type="text" class="form-control" placeholder="Username" required="" />
-            </div>
-            <div>
-              <input type="email" class="form-control" placeholder="Email" required="" />
-            </div>
-            <div>
-              <input type="password" class="form-control" placeholder="Password" required="" />
-            </div>
-            <div>
-              <a class="btn btn-default submit" href="../index.html">Submit</a>
-            </div>
+                        $("#login").click(function (event) {
+                            event.preventDefault();
+                            var data = {};
 
-            <div class="clearfix"></div>
+                            data.type = $("input[type='radio'].flat:checked").val();
 
-            <div class="separator">
-              <p class="change_link">Already a member ?
-                <a href="#signin" class="to_register"> Log in </a>
-              </p>
+                            data.email = $("#email").val();
+                            data.password = $("#password").val();
 
-              <div class="clearfix"></div>
-              <br />
+                            if (data.email.trim() == "" || data.password == "") {
 
-              <div>
-                <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-              </div>
-            </div>
-          </form>
-        </section>
-      </div>
+
+                                    swal({title: "Error", text: " Email and Password are Required!" , type: "error"});
+
+
+                                return;
+                            }
+                            $.ajax({
+                                url: 'http://localhost:3000/login',
+                                contentType: "application/json; charset=utf-8",
+                                data: JSON.stringify(data),
+                                type: 'POST',
+                                success: function (res) {
+                                    console.log(res)
+                                    if (res.error) {
+                                        swal({title: "Error", text: res.error, type: "error"});
+                                    }
+                                    else {
+                                        localStorage.setItem('token', res.token);
+                                        localStorage.setItem('name', res.name);
+                                        if(data.type == "student")
+                                        {
+                                            window.location.href = "signup.html";
+                                        }
+
+                                    }
+                                }
+                            });
+                        });
+                    })
+                </script>
+            </section>
+        </div>
     </div>
-  </div>
-</body>
+</div>
 
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function () {-->
+
+<!--$("#login").click(function (event) {-->
+<!--event.preventDefault();-->
+<!--var data = {};-->
+<!--data.email = $("#username").val();-->
+<!--data.password = $("#Password").val();-->
+<!--data.type = $("#type").val();-->
+
+<!--if (data.email.trim() == "" || data.password == "") {-->
+<!--swal({title: "Error", text: "Email and Password are Required!", type: "error"});-->
+<!--return;-->
+<!--}-->
+<!--$.ajax({-->
+<!--url: 'http://localhost:3000/login',-->
+<!--contentType: "application/json; charset=utf-8",-->
+<!--data: JSON.stringify(data),-->
+<!--type: 'POST',-->
+<!--success: function (res) {-->
+<!--console.log(res)-->
+<!--if (res.error) {-->
+<!--swal({title: "Error", text: res.error, type: "error"});-->
+<!--}-->
+<!--else {-->
+<!--localStorage.setItem('token', res.token);-->
+<!--localStorage.setItem('name', res.name);-->
+<!--if(data.type == Student){-->
+<!--window.location.href = "../index.html";-->
+<!--}-->
+
+<!--}-->
+<!--}-->
+<!--});-->
+<!--});-->
+<!--})-->
+<!--</script>-->
+
+
+</body>
 </html>
+
