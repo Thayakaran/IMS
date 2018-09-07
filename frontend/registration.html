@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IMS | Login</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+
+    <script src="production/js/jquery.min.js"></script>
+    <script src="../sweetalert2.all.min.js"></script>
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form>
+                    <h1>User Registration</h1>
+                    <div>
+                        <input type="text" class="form-control" placeholder="username" id='username' required="" />
+                    </div>
+                    <div class="flat">
+                        <span style="float: left; margin-left: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="student" class="flat"> Student</span>
+                        <span style="margin-bottom: 20px;"><input type="radio" name="user" value="company" class="flat"> Company</span>
+                        <span style="margin-bottom: 20px; margin-left: 20px;"><input type="radio" name="user" value="examiner" class="flat"> Examiner</span>
+                        <span style="float: right; margin-right: 20px; margin-bottom: 20px;"><input type="radio" name="user" value="itm" class="flat">ITM</span>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" class="form-control" placeholder="email" id='email' required="" />
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="Password" id='password' required="" />
+                    </div>
+                    <div>
+                        <a class="btn btn-default submit"  id="register" >Sign UP</a>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </form>
+
+            </section>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="build/js/register.js"></script>
+
+</body>
+
+</html>

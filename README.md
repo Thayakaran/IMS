@@ -1,5 +1,3 @@
-<div align="center"><h1 style="color:red;">Check your System Time before doing any Actions</h1> </div>
-<hr>
 <div align="center"><h1>Internship Management System</h1> </div>
 <hr>
 
