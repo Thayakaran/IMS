@@ -1,10 +1,23 @@
 language: node_js
 node_js:
-  - "stable"
-  
-services:
-  - mongodb
-
+- stable
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+notifications:
+  email:
+  - 18sugan@gmail.com
+  - p.puvipavan@gmail.com
+  - jvithu2004@gmail.com
+  - rajendranyathushan3@gmail.com
+  - thayakrn@gmail.com
+  - n.sankeeth@gmail.com
+  on_success: always
+  on_failure: always
+deploy:
+  provider: heroku
+  api_key:
+    secure: 5OyE/cmrzqzsI8VRKXdj51WGRchk1Ki4RkjE3MCY3fS87yS2Pt052CAbfolFz0pwo6V7SNGLTrLsnFpIAMoVxEltf8zWE4NQaitA5dfRGlbjN10sFlstp13cq1QrXh8TnSDrRaV/Z8y0bIiQmNDiCAH51G9kK6pxLiiBV5bWI8eL5P40VChY12ys2f00hUnBTrJukquQ6IcZ7E8vBwNw9EorwrEZ2X7nPkvN4hWP/xUVJcVG4ksM74aF92NIKdRlqnHNdGdhefD/yudfQ9SRUiMD5LKbCOtds/z7hYB6GjgmcNQmqlPbaz9TI7STHlVP2m3znk0KIBJuQ23IiNdqDCZ8UbF7HZmz8AS8zH/einTTpWI2+MaKjNePxDmlSEhYoAJam6nPOZLJlIe+RyQJFsa3xdF/U3sdKTuaWFSHDI2tpqPNWK7YQUBd2bZldoZwjylgypWsj7nzS+f3W5YtVk5tlmdnYkiu37LcwSZ45O7xdCT+siUQhIJHjwn5u6agEVSFXVOLXesFc8HrYH6suJ9k+x0Azgl55YDg+INlI4F355aooew7KsHlse+eEFsoz6uOdSOBFtB8orAztt+yIXqp9NMIyzVOg61h8eedVFNJdaItUHDijgYw+U85ktjP0yJjwwBQWWwm0OlYIXx3KDXT+GCa7v7eCXXZ/PU2804=
+  app:
+    master: sliit-ims-stg
+    production: sliit-ims-prd
