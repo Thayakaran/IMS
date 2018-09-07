@@ -9,7 +9,6 @@ const UserSchema = new Schema({
     password:String,
     sessions: [String]
 
-
 });
 
 mongoose.model('user' , UserSchema);
