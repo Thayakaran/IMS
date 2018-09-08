@@ -20,7 +20,7 @@ $(document).ready(function () {
             return;
         }
         $.ajax({
-            url: 'http://localhost:3000/login',
+            url: '/login',
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(data),
             type: 'POST',

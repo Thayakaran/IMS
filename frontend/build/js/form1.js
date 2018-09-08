@@ -27,7 +27,7 @@ $("#submit_form1").click(function (event) {
     formdata.date = $("#date").val();
 
     $.ajax({
-        url: 'http://localhost:3000/form1',
+        url: '/form1',
         contentType:"application/json; charset=utf-8",
         data:JSON.stringify(formdata),
         type:'POST',

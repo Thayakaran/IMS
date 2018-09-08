@@ -15,7 +15,7 @@
             return;
         }
         $.ajax({
-            url: 'http://localhost:3000/register',
+            url: '/register',
             contentType:"application/json; charset=utf-8",
             data:JSON.stringify(data),
             type:'POST',
