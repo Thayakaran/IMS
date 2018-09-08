@@ -10,7 +10,7 @@ router.post('/register', function (req, res) {
     user.email = req.body.email;
     user.password = req.body.password;
 
-    if (user.email == undefined || user.password == undefined){
+    if (user.email == undefined || user.password == undefined || user.type == undefined){
         res.status(202).json({"error":"Email & Password Required"});
     }
     else {
