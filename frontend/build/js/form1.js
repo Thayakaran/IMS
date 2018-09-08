@@ -38,7 +38,7 @@ $("#submit_form1").click(function (event) {
             }
             else{
                 swal({title:"Success", text:"Your Form 1 Submitted successfully.", type:"success"}).then(function () {
-                    location.href = "/index.html";
+                    location.href = "home.html";
                 });;
             }
         }
@@ -46,5 +46,5 @@ $("#submit_form1").click(function (event) {
 });
 
 $("#cancelbutton").click(function (event) {
-    location.href = "/";
+    location.href = "home.html";
 });

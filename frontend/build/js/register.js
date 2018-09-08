@@ -25,7 +25,7 @@
                 }
                 else{
                     swal({title:"Success", text:"Your Account Has Been Created. Please Login", type:"success"}).then(function () {
-                        window.location.href = "./login.html";
+                        window.location.href = "../index.html";
                     });;
                 }
             }
