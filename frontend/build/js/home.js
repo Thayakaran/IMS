@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     $("#logout1, #logout2").click(function () {
         localStorage.clear();
-        location.href = "index.html";
+        location.href = "/";
       });
     //form 1
     $('.form_I_1').click(function () {
