@@ -1,6 +1,5 @@
 
 $("#submit_form1").click(function (event) {
-    console.log("hiiii");
     event.preventDefault();
     var formdata = {};
 
