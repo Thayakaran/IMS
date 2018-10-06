@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="production/images/favicon.png" type="image/ico" />
+
+	<title>IMS | Form 1</title>
+
+	<!-- Bootstrap -->
+	<link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- NProgress -->
+	<link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+	<!-- Animate.css -->
+	<link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+
+	<!-- Custom Theme Style -->
+	<link href="build/css/custom.min.css" rel="stylesheet">
+
+<style>
+ 
+</style>
+
+<script src="production/js/jquery.min.js"></script>
+<script src="production/js/sweetalert2.all.min.js"></script>
+
+</head>
+<body>
+<form id="form_I_5" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" onsubmit="return false">	
+	<img style="float:right" src="production/images/SliitLogo.jpg" alt="SLIIT" width="220" height="100">
+    <h2 >Faculty of Computing</h2>
+    <h3><b> Form I - 5 </b></h3>
+    <h4 style="text-align:center ; font-size:200%;padding-right:200px"> Final Evaluation of the Internship Student </h4>  
+ 
+
+		<div class="x_panel">
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class="control-label col-md-3 col-sm-3 col-xs-12" for="studentId">Student ID
+				</label>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<input type="text" id="studentId" required="required" class="form-control col-md-7 col-xs-12">
+				</div>
+				<label class="control-label col-md-3 col-sm-3 col-xs-12" for="studentname">Student's Name  
+				</label>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<input type="text" id="studentname" required="required" class="form-control col-md-7 col-xs-12">
+				</div>
+            </div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+                            
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+			<div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class="control-label col-md-3 col-sm-3 col-xs-12" for="employername">Employer's Name
+				</label>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<input type="text" id="employername" required="required" class="form-control col-md-7 col-xs-12">
+				</div>
+				<label class="control-label col-md-3 col-sm-3 col-xs-12" for="supervisorname">Supervisor`s Name  
+				</label>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<input type="text" id="supervisorname" required="required" class="form-control col-md-7 col-xs-12">
+				</div>
+            </div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+            
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="contractVariation">Describe the differences, if any, between student's initial contract and actual assignment which developed
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="contractVariation" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12">Performance of Student
+				</label>
+				<table class="table table-bordered" style="text-align: center;">
+                    <thead>
+                      <tr style="background-color:#f2f2f2">
+                        <th>Category</th>
+                        <th>Above Average</th>
+                        <th>Average</th>
+                        <th>Below Average</th>
+                        <th>Comments, Examples, Observations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Volume of Work</td>
+                        <td><input type="checkbox" name="table1[1][]" id="" value="Above Average"></td>
+                        <td><input type="checkbox" name="table1[1][]" id="" value="Average"></td>
+                        <td><input type="checkbox" name="table1[1][]" id="" value="Below Average"></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO1" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Quality of Work</td>
+                        <td><input type="checkbox" name="table1[2][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[2][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[2][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO2" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Analytical ability</td>
+                        <td><input type="checkbox" name="table1[3][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[3][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[3][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO3" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Ability to resolve problems</td>
+                        <td><input type="checkbox" name="table1[4][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[4][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[4][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO4" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Accuracy and throughness</td>
+                        <td><input type="checkbox" name="table1[5][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[5][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[5][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO5" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Ability to work under pressure</td>
+                        <td><input type="checkbox" name="table1[6][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[6][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[6][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO6" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Oral communications</td>
+                        <td><input type="checkbox" name="table1[7][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[7][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[7][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO7" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Written communications</td>
+                        <td><input type="checkbox" name="table1[8][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[8][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[8][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO8" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Original and critical thinking</td>
+                        <td><input type="checkbox" name="table1[9][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[9][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[9][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO9" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Ability to learn</td>
+                        <td><input type="checkbox" name="table1[10][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[10][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table1[10][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t1CEO10" value=""></td>
+                      </tr>
+                    </tbody>
+                </table>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12">Work Habbits of Students
+				</label>
+				<table class="table table-bordered" style="text-align: center;">
+                    <thead>
+                      <tr style="background-color:#f2f2f2">
+                        <th>Category</th>
+                        <th>Above Average</th>
+                        <th>Average</th>
+                        <th>Below Average</th>
+                        <th>Comments, Examples, Observations</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Effective in organizing work</td>
+                        <td><input type="checkbox" name="table2[1][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[1][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[1][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO1" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Takes the initiative</td>
+                        <td><input type="checkbox" name="table2[2][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[2][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[2][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO2" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Flexible to non-routine work</td>
+                        <td><input type="checkbox" name="table2[3][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[3][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[3][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO3" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Active and alert</td>
+                        <td><input type="checkbox" name="table2[4][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[4][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[4][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO4" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Attitude tward organization</td>
+                        <td><input type="checkbox" name="table2[5][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[5][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[5][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO5" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Team player</td>
+                        <td><input type="checkbox" name="table2[6][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[6][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[6][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO6" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Diligence and perseverance</td>
+                        <td><input type="checkbox" name="table2[7][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[7][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[7][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO7" value=""></td>
+                      </tr>
+                      <tr>
+                        <td style="background-color:#f2f2f2">Accepts responsibility</td>
+                        <td><input type="checkbox" name="table2[8][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[8][]" id="" value=""></td>
+                        <td><input type="checkbox" name="table2[8][]" id="" value=""></td>
+                        <td><input style="width: 100%; height: 100%; border-width: 0px; background-color: white;" type="text" id="t2CEO8" value=""></td>
+                      </tr>
+                    </tbody>
+                </table>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="personalCharacter">List positive personal characteristics (Business Acumen, Vigor, Adaptability, Teamwork, Leadership, Confidence, etc.)
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="personalCharacter" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="professionalCharacter">List personal characteristics that will help the student in his/her professional development
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="professionalCharacter" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="effectivenessOfInternship">How effective has the Internship Program been in meeting the needs of your organization?
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="effectivenessOfInternship" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="internshipSuggestion">Please suggest ways you feel we could make our program more meaningful to the student and you, the employer.
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="internshipSuggestion" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="accadamicSuggestion">Please comment on the appropriateness of the student's academic training as it related to a position in your organization.
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="accadamicSuggestion" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12" for="otherComments">Any other comments about the student or on the Faculty Advisor:
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<textarea id="otherComments" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+				<label class=" col-md-12 col-sm-12 col-xs-12"><h3><b>Overall student performance</b></h3>
+				</label>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+                    <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Outstanding</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Very Good</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Good</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Marginal</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Unsatisfactory</h5></label>
+                    <label class="col-md-1 col-sm-1 col-xs-1"></label>
+				</div>
+			</div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <div class="form-group">
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            <div class="form-group col-md-8 col-sm-8 col-xs-12">
+                <label class=" col-md-12 col-sm-12 col-xs-12"><h4>This report has been discussed with the student</h4>
+                </label>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="externalSupervisorName">External Supervisor's Name
+			        </label>
+			        <div class="col-md-4 col-sm-4 col-xs-12">
+			        	<input type="text" id="externalSupervisorName" required="required" class="form-control col-md-7 col-xs-12">
+                    </div>
+                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="date">Date
+			        </label>
+			        <div class="col-md-4 col-sm-4 col-xs-12">
+			        	<input type="text" id="date" required="required" class="form-control col-md-7 col-xs-12" disabled>
+			        </div>
+                </div>
+            </div>
+            <div class="form-group col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+            <br>
+			<div class="ln_solid"></div>
+
+			<div class="form-group">
+				<div class=" control-label col-md-1 col-sm-1 col-xs-12"></div>
+				<button class="btn btn-primary col-md-2 col-sm-2 col-xs-12" type="button" id="cancelbutton">Cancel</button>
+				<div class="col-md-2 col-sm-2 col-xs-12"></div>
+				<button class="btn btn-warning col-md-2 col-sm-2 col-xs-12" type="reset">Reset</button>
+				<div class="col-md-2 col-sm-2 col-xs-12"></div>
+                <button class="btn btn-success col-md-2 col-sm-2 col-xs-12" type="submit" id="submit_form5">Submit</button>
+                <div class=" control-label col-md-1 col-sm-1 col-xs-12"></div>
+			</div>
+		</div>
+
+</form>
+<script>
+    $("input:checkbox").on('click', function() {
+    // in the handler, 'this' refers to the box clicked on
+    var $box = $(this);
+    if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:checkbox[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+    } else {
+        $box.prop("checked", false);
+    }
+    });
+
+    document.getElementById("date").defaultValue = new Date().toJSON().slice(0,10).replace(/-/g,'-');
+
+</script>
+
+<script src="build/js/form5.js"></script>
+
+</body>
+
+</html>
