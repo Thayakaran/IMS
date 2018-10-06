@@ -20,4 +20,11 @@ $(document).ready(function(){
     //         $.getScript('/build/js/form3.js');
     //     });
     //   });
+
+    //form 5
+    $('.form_I_5').click(function () {
+        $("#forms").load('form5.html', function() {
+            $.getScript('/build/js/form5.js');
+        });
+      });
 });
