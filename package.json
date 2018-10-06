@@ -37,6 +37,7 @@
     "cors": "^2.8.4",
     "crypto": "^1.0.1",
     "express": "^4.16.3",
+    "md5": "^2.2.1",
     "mongoose": "^5.1.4",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
