@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="production/images/favicon.png" type="image/ico" />
 
-	<title>IMS | Form 1</title>
+	<title>IMS | Form 5</title>
 
 	<!-- Bootstrap -->
 	<link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -335,11 +335,11 @@
 				</label>
 				<div class="col-md-12 col-sm-12 col-xs-12">
                     <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Outstanding</h5></label>
-                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Very Good</h5></label>
-                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Good</h5></label>
-                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Marginal</h5></label>
-                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall"><h5>Unsatisfactory</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall" value="Outstanding"><h5>Outstanding</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall" value="Very Good"><h5>Very Good</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall" value="Good"><h5>Good</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall" value="Marginal"><h5>Marginal</h5></label>
+                    <label class="col-md-2 col-sm-2 col-xs-2 radio-inline"><input type="checkbox" name="overall" value="Unsatisfactory"><h5>Unsatisfactory</h5></label>
                     <label class="col-md-1 col-sm-1 col-xs-1"></label>
 				</div>
 			</div>
@@ -382,24 +382,23 @@
 		</div>
 
 </form>
-<script>
-    $("input:checkbox").on('click', function() {
-    // in the handler, 'this' refers to the box clicked on
-    var $box = $(this);
-    if ($box.is(":checked")) {
-        // the name of the box is retrieved using the .attr() method
-        // as it is assumed and expected to be immutable
-        var group = "input:checkbox[name='" + $box.attr("name") + "']";
-        // the checked state of the group/box on the other hand will change
-        // and the current value is retrieved using .prop() method
-        $(group).prop("checked", false);
-        $box.prop("checked", true);
-    } else {
-        $box.prop("checked", false);
-    }
-    });
-
-    document.getElementById("date").defaultValue = new Date().toJSON().slice(0,10).replace(/-/g,'-');
+<script>  
+  $("input:checkbox").on('click', function() {
+      // in the handler, 'this' refers to the box clicked on
+      var $box = $(this);
+      if ($box.is(":checked")) {
+          // the name of the box is retrieved using the .attr() method
+          // as it is assumed and expected to be immutable
+          var group = "input:checkbox[name='" + $box.attr("name") + "']";
+          // the checked state of the group/box on the other hand will change
+          // and the current value is retrieved using .prop() method
+          $(group).prop("checked", false);
+          $box.prop("checked", true);
+      } else {
+          $box.prop("checked", false);
+      }
+  });
+  document.getElementById("date").defaultValue = new Date().toJSON().slice(0,10).replace(/-/g,'-');
 
 </script>
 
