@@ -1,3 +1,4 @@
+$(document).ready(function() {
 
 $("#submit_form5").click(function (event) {
     event.preventDefault();
@@ -95,6 +96,8 @@ $("#submit_form5").click(function (event) {
         date = $("#date").val()
     }
 
+    console.log(formdata);
+    alert("kdkdkdk");
     $.ajax({
         url: '/form5',
         contentType:"application/json; charset=utf-8",
@@ -115,4 +118,6 @@ $("#submit_form5").click(function (event) {
 
 $("#cancelbutton").click(function (event) {
     location.href = "home.html";
+});
+
 });
