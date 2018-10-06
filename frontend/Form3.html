@@ -1,310 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="production/images/favicon.png" type="image/ico" />
+    <link rel="icon" href="production/images/favicon.png" type="image/ico" />
 
-	<title>Form 3</title>
+    <title>Form 3</title>
 
-	<!-- Bootstrap -->
-	<link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- NProgress -->
-	<link href="vendors/nprogress/nprogress.css" rel="stylesheet">
-	<!-- Animate.css -->
-	<link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
-	<!-- Custom Theme Style -->
-	<link href="build/css/custom.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
 
 
-<style>
- th, td{
+    <style>
+        th, td{
     text-align: center;  
  }
 </style>
-<script src="production/js/jquery.min.js"></script>
-<script src="production/js/sweetalert2.all.min.js"></script>
+    <script src="production/js/jquery.min.js"></script>
+    <script src="production/js/sweetalert2.all.min.js"></script>
 
 
 </head>
+
 <body>
-<form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">	
-		<img style="float:right" src="production/images/SliitLogo.jpg" alt="Trulli" width="220" height="100">
-    <h2 style="font-family:courier;font-size:150% ">Faculty of Computing</h2>
-    <h3 style="font-family:Arial,bold"> Form I - 3  </h3>
-    <h4 style="text-align:center ; font-size:200%;padding-right:200px"> Intern`s Daily Diary <h4>  
- 
+    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+        <img style="float:right" src="production/images/SliitLogo.jpg" alt="Trulli" width="220" height="100">
+        <h2 style="font-family:courier;font-size:150% ">Faculty of Computing</h2>
+        <h3 style="font-family:Arial,bold"> Form I - 3 </h3>
+        <h4 style="text-align:center ; font-size:200%;padding-right:200px"> Intern`s Daily Diary <h4>
 
-        <div class="x_panel">
 
-		<div class="form-group">
-				<label class="control-label col-md-3 col-sm-5 col-xs-12" for="Name">Intern`s Information
-				</label>
-				
-            </div>
-            
-            <div  class="form-group">
-            <label class="control-label col-md-3 col-sm-6 col-xs-12" for="sId">Student ID  
-                </label>
-                <div class="col-md-3 col-sm-5 col-xs-12">
-                    <input type="text" id="sId" required="required" class="form-control col-md-7 col-xs-12">
-                </div>
-                    <button class="btn btn-default" id="searchBtn" type="submit">Go!</button>
-                
-            </div>
-        
-            <div  class="form-group">
-                    <label class="control-label col-md-3 col-sm-6 col-xs-12" for="sName">Intern`s Name 
-                    </label>
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <input type="text" id="sName" required="required" class="form-control col-md-7 col-xs-12">
-                    </div>
-            </div>
-
-        <div  class="form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sAddress">Intern`s Private Address  
-            </label>
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <input type="text" id="sAddress" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-</div>
-
-<div  class="form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sPhoNum">Contect Number 
-            </label>
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <input type="text" id="sPhoNum" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-</div>
-
-<div  class="form-group">
-        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sEmail">E-mail Address 
-            </label>
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <input type="text" id="sEmail" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-</div>
-
-<div class="form-group">
-            <label class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name">Internship Information
-            </label>
-            </div>
-
- 
-       <div  class="form-group">
-            <label class="control-label col-md-3 col-sm-6 col-xs-12" for="jTitle">Internship Title 
-            </label>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <input type="text" id="jTitle" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-            <label class="control-label col-md-2 col-sm-1 col-xs-12" for="Jspecifice">Specialisation  
-                </label>
-                <div class="col-md-3 col-sm-2 col-xs-12">
-                    <input type="text" id="Jspecifice" required="required" class="form-control col-md-7 col-xs-12">
-                </div>
-        </div>
-                <div  class="form-group">
-                        <label class="control-label col-md-3 col-sm-2 col-xs-12" for="Jperiod">Overall Intership Period From 
-                        </label>
-                        <div class="col-md-3 col-sm-6 col-xs-12">
-                            <input type="date" id="JperiodFrom" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="JperiodTo">Period To  
-                            </label>
-                            <div class="col-md-3 col-sm-2 col-xs-12">
-                                <input type="date" id="JperiodTo" required="required" class="form-control col-md-7 col-xs-12">
-                            </div>
-                </div>
-
-                <div  class="form-group">
-                    <label class="control-label col-md-3 col-sm-6 col-xs-12" for="SuName">Supervisor Name
-                    </label>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <input type="text" id="SuName" required="required" class="form-control col-md-7 col-xs-12">
-                    </div>
-                </div>
-
-                
-
-                        <div class="ln_solid"></div>
-
-                        <div class="form-group">
-                                <p class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name"><i>(To be filled by the Intern)</i>
-                                </p>
-                                </div>
+                <div class="x_panel">
 
                     <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-6 col-xs-12" for="jTitle">Internal Training Information 
-                                </label>
+                        <label class="control-label col-md-3 col-sm-5 col-xs-12" for="Name">Intern`s Information
+                        </label>
 
                     </div>
-                    
 
-             <div  class="form-group">
-            <label class="control-label col-md-3 col-sm-6 col-xs-12" for="Tparty">Training Party 
-            </label>
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <input type="text" id="Tparty" required="required" class="form-control col-md-7 col-xs-12">
-            </div>
-        </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12" for="sId">Student ID
+                        </label>
+                        <div class="col-md-3 col-sm-5 col-xs-12">
+                            <input type="text" id="sId" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                        <button class="btn btn-default" id="searchBtn" type="submit">Go!</button>
 
-        <div class="form-group">             
-                <label class="control-label col-md-3 col-sm-2 col-xs-12">Training Description</label>
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                            <textarea id ="Tdescription"class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
-        
-                </div>
-                
-        </div>
-                <div  class="form-group">
-                        <label class="control-label col-md-3 col-sm-2 col-xs-12" for="Tfrom">From 
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12" for="sName">Intern`s Name
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <input type="text" id="sName" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sAddress">Intern`s Private
+                            Address
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <input type="text" id="sAddress" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sPhoNum">Contect Number
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <input type="text" id="sPhoNum" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sEmail">E-mail Address
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <input type="text" id="sEmail" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name">Internship
+                            Information
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-12" for="Jperiod">Overall Intership Period
+                            From
+                        </label>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <input type="date" id="JperiodFrom" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="JperiodTo">Period To
+                        </label>
+                        <div class="col-md-3 col-sm-2 col-xs-12">
+                            <input type="date" id="JperiodTo" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12" for="SuName">Supervisor Name
+                        </label>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <input type="text" id="SuName" required="required" readonly="readonly" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+
+
+                    <div class="ln_solid"></div>
+
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name"><i>(To be filled by the
+                                Intern)</i>
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12" for="jTitle">Internal Training
+                            Information
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12" for="Tparty">Training Party
+                        </label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <input type="text" id="Tparty" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-12">Training Description</label>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <textarea id="Tdescription" class="resizable_textarea form-control" rows="4" placeholder=""></textarea>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-2 col-xs-12" for="Tfrom">From
                         </label>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <input type="date" id="Tfrom" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
-                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="Tto">To  
-                            </label>
-                            <div class="col-md-3 col-sm-2 col-xs-12">
-                                <input type="date" id="Tto" required="required" class="form-control col-md-7 col-xs-12">
-                            </div>
-                </div>
+                        <label class="control-label col-md-2 col-sm-1 col-xs-12" for="Tto">To
+                        </label>
+                        <div class="col-md-3 col-sm-2 col-xs-12">
+                            <input type="date" id="Tto" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
 
-                <div class="form-group">
+                    <div class="form-group">
                         <label class="control-label col-md-3 col-sm-6 col-xs-12"></label>
                         <div class=" col-md-3 col-sm-6 col-xs-12">
-                        <button class="btn btn-primary col-md-3 col-sm-6 col-xs-12" type="button" id="TraningAdd">Add</button>
+                            <button class="btn btn-primary col-md-3 col-sm-6 col-xs-12" type="button" id="TraningAdd">Add</button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
+                    <div class="form-group">
                         <div class=" col-md-3 col-sm-6 col-xs-12">
-                            </div>
-                </div>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                        <table class="table table-bordered" >
-                                <thead>
-                                  <tr>
-                                    
+                    <div class="form-group">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+
                                     <th>Training Party</th>
-                                    <th>Training Description</th>                                                                  
-                                    <th >From </th>
+                                    <th>Training Description</th>
+                                    <th>From </th>
                                     <th>To</th>
-                                  
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  <tr >
-                                    
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    
-                                  </tr>                                
-                                </tbody>
-                                </table>
+
+                                </tr>
+                            </thead>
+                            <tbody id="trainingTable">
+                            </tbody>
+                        </table>
                     </div>
                     <div class="ln_solid"></div>
-            
-                            <div class="form-group">
-                                <p class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name"><i>(To be filled by the Intern)</i>
-                                </p>
-                                </div>
-                            <div class="form-group">             
-                                    <p class="control-label col-md-3 col-sm-2 col-xs-12">Summary of the key tasks completed for the month of (Month/Year) </p>
-                                    <div class="col-md-8 col-sm-6 col-xs-12">
-												<textarea class="resizable_textarea form-control" rows="9" placeholder="(Interns should maintain weekly minimum this area, providing the summery of the task and the task duration. Interns are also advised to maintain a blog where the intern can mention blog URL here)"></textarea>
-									</div>
-                            </div>
-  
-                            <div class="form-group">             
-                                <p class="control-label col-md-3 col-sm-2 col-xs-12">Details and notes of work carried out, problems encounted and hoew solved etc, sketches and dimensions to be given whereever possible.</p>
-                                <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <textarea class="resizable_textarea form-control" rows="9" placeholder="(Interns are advised enter information to justify and support the tasks being carried out, so that the external supervisor has a claer visibility of the work being carried out, so that )"></textarea>
-                                </div>
-                        </div>
 
-                        <div class="form-group">             
-                            <p class="control-label col-md-3 col-sm-2 col-xs-12">Remarks and certification by the external supervisor the month </p>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                                        <textarea class="resizable_textarea form-control" rows="9" placeholder=""></textarea>
-                            </div>
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name"><i>(To be filled by the
+                                Intern)</i>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Summary of the key tasks completed for the
+                            month of (Month/Year) </p>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <textarea class="resizable_textarea form-control" rows="9" id="taskSummary1" placeholder="(Interns should maintain weekly minimum this area, providing the summery of the task and the task duration. Interns are also advised to maintain a blog where the intern can mention blog URL here)"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Details and notes of work carried out,
+                            problems encounted and hoew solved etc, sketches and dimensions to be given whereever
+                            possible.</p>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <textarea class="resizable_textarea form-control" rows="9" id="detDesc1" placeholder="(Interns are advised enter information to justify and support the tasks being carried out, so that the external supervisor has a claer visibility of the work being carried out, so that )"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Remarks and certification by the external
+                            supervisor the month </p>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <textarea class="resizable_textarea form-control" rows="9" id="remarks1" placeholder=""></textarea>
+                        </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                                <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                                <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                                <label class="col-md-8 col-sm-8 col-xs-12 radio-inline"><input type="checkbox" name="optradio">I certify that above information is correct</label>
-                            </div>
-                            
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                            <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                            <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                            <label class="col-md-8 col-sm-8 col-xs-12 radio-inline"><input type="checkbox" id="chkSup1"
+                                    name="optradio">I
+                                certify that above information is correct</label>
                         </div>
-                        <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-6 col-xs-12"></label>
-                                <div class=" col-md-3 col-sm-6 col-xs-12">
-                                <button class="btn btn-primary col-md-3 col-sm-6 col-xs-12" type="button" id="TraningAdd">Save</button>
-                            </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12"></label>
+                        <div class=" col-md-3 col-sm-6 col-xs-12">
+                            <button class="btn btn-primary col-md-3 col-sm-6 col-xs-12" type="button" id="month1Button">Save</button>
                         </div>
+                    </div>
 
                     <div class="ln_solid"></div>
-                                
+
                     <div class="form-group">
-                        <p class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name"><i>(To be filled by the Intern)</i>
+                        <p class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name"><i>(To be filled by the
+                                Intern)</i>
                         </p>
+                    </div>
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Summary of the key tasks completed for the
+                            month of (Month/Year) </p>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <textarea class="resizable_textarea form-control" rows="9" id="taskSummary2" placeholder="(Interns should maintain weekly minimum this area, providing the summery of the task and the task duration. Interns are also advised to maintain a blog where the intern can mention blog URL here)"></textarea>
+
                         </div>
-                    <div class="form-group">             
-                            <p class="control-label col-md-3 col-sm-2 col-xs-12">Summary of the key tasks completed for the month of (Month/Year) </p>
-                            <div class="col-md-8 col-sm-6 col-xs-12">
-                                        <textarea class="resizable_textarea form-control" rows="9" placeholder="(Interns should maintain weekly minimum this area, providing the summery of the task and the task duration. Interns are also advised to maintain a blog where the intern can mention blog URL here)"></textarea>
-                    
-                            </div>
-                            
+
                     </div>
 
-                    <div class="form-group">             
-                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Details and notes of work carried out, problems encounted and hoew solved etc, sketches and dimensions to be given whereever possible.</p>
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Details and notes of work carried out,
+                            problems encounted and hoew solved etc, sketches and dimensions to be given whereever
+                            possible.</p>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                    <textarea class="resizable_textarea form-control" rows="9" placeholder="(Interns are advised enter information to justify and support the tasks being carried out, so that the external supervisor has a claer visibility of the work being carried out, so that )"></textarea>
+                            <textarea class="resizable_textarea form-control" rows="9" id="detDesc2" placeholder="(Interns are advised enter information to justify and support the tasks being carried out, so that the external supervisor has a claer visibility of the work being carried out, so that )"></textarea>
                         </div>
-                </div>
-
-                <div class="form-group">             
-                    <p class="control-label col-md-3 col-sm-2 col-xs-12">Remarks and certification by the external supervisor the month </p>
-                    <div class="col-md-8 col-sm-8 col-xs-12">
-                                <textarea class="resizable_textarea form-control" rows="9" placeholder=""></textarea>
                     </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                <label class="col-md-1 col-sm-1 col-xs-1"></label>
-                <label class="col-md-8 col-sm-8 col-xs-12 radio-inline"><input type="checkbox" name="optradio">I certify that above information is correct</label>
-            </div>
-            
-        </div>
-        <div class="form-group">
-                <label class="control-label col-md-3 col-sm-6 col-xs-12"></label>
-                <div class=" col-md-3 col-sm-6 col-xs-12">
-                <button class="btn btn-primary col-md-3 col-sm-6 col-xs-12" type="button" id="TraningAdd">Save</button>
-            </div>
-        </div>
-			
-            
-		
-                            
 
+                    <div class="form-group">
+                        <p class="control-label col-md-3 col-sm-2 col-xs-12">Remarks and certification by the external
+                            supervisor the month </p>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <textarea class="resizable_textarea form-control" rows="9" id="remarks2" placeholder=""></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                            <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                            <label class="col-md-1 col-sm-1 col-xs-1"></label>
+                            <label class="col-md-8 col-sm-8 col-xs-12 radio-inline"><input type="checkbox" id="chkSup2"
+                                    name="optradio">I
+                                certify that above information is correct</label>
+                        </div>
 
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-6 col-xs-12"></label>
+                        <div class=" col-md-3 col-sm-6 col-xs-12">
+                            <button class="btn btn-primary col-md-3 col-sm-6 col-xs-12" type="button" id="month2Button">Save</button>
+                        </div>
+                    </div>
 
-</form>
+    </form>
 
-<script src="build/js/form3.js"></script>
+    <script src="build/js/form3.js"></script>
 </body>
+
 </html>
