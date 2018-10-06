@@ -31,19 +31,19 @@
 
 </head>
 <body>
-<form id="form_I_1" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">	
+<form id="form_I_1" data-parsley-validate  class="form-horizontal form-label-left" novalidate >	
 	<img style="float:right" src="production/images/SliitLogo.jpg" alt="SLIIT" width="220" height="100">
     <h2 >Faculty of Computing</h2>
     <h3><b> Form I - 1 </b></h3>
     <h4 style="text-align:center ; font-size:200%;padding-right:200px"> Internship Acceptance Form </h4>  
  
 
-		<div class="x_panel">
+		<!-- <div class="x_panel"> -->
 			<div class="form-group">
 				<label class="control-label col-md-4 col-sm-5 col-xs-12" for="sId">(To Be filled by the Student)</label>
 				<label class="control-label col-md-3 col-sm-5 col-xs-12" for="sId">Student ID No : 	</label>
 				<div class="col-md-3 col-sm-6 col-xs-12">
-					<input type="text" id="sId" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="sId" required="required" class="form-control col-md-7 col-xs-12" data-parsley-type="alphanum" data-validate-lengthRange="6" >
 				</div>
 			</div>
  
@@ -51,7 +51,7 @@
 				<label class="control-label col-md-4 col-sm-3 col-xs-12" for="sName">Student`s Name
 				</label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-					<input type="text" id="sName" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="sName" required="required" class="form-control col-md-7 col-xs-12" data-parsley-type="alphanum">
 				</div>
 			</div>
 
@@ -59,7 +59,7 @@
 				<label class="control-label col-md-4 col-sm-3 col-xs-12" for="Address">Address 
 				</label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-					<input type="text" id="Address" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Address" required="required" class="form-control col-md-7 col-xs-12" data-parsley-type="alphanum">
 				</div>
 			</div>
 
@@ -75,7 +75,7 @@
 				<label class="control-label col-md-4 col-sm-3 col-xs-12" for="Mobile_Phone">Mobile Phone 
 				</label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-					<input type="text" id="Mobile_Phone" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Mobile_Phone" required="required" class="form-control col-md-7 col-xs-12" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-maxlength="10" data-parsley-minlength-message="10 digits for phone number" data-parsley-maxlength-message="10 digits for phone number">
 				</div>
 			</div>
 
@@ -98,7 +98,7 @@
 				<label class="control-label col-md-1 col-sm-3 col-xs-12" for="Semester">Semester  
 				</label>
 				<div class="col-md-1 col-sm-6 col-xs-12">
-					<input type="text" id="Semester" required="required" class="form-control col-md-2 col-xs-12">
+					<input type="text" id="Semester" required="required" class="form-control col-md-2 col-xs-12" data-parsley-type="digits">
 				</div>
 				<label class="control-label col-md-1 col-sm-3 col-xs-12" for="Year">Year  
 				</label>
@@ -108,7 +108,7 @@
 				<label class="control-label col-md-1 col-sm-3 col-xs-12" for="CGPA">CGPA  
 				</label>
 				<div class="col-md-1 col-sm-6 col-xs-12">
-					<input type="text" id="CGPA" required="required" class="form-control col-md-2 col-xs-12">
+					<input type="text" id="CGPA" required="required" class="form-control col-md-2 col-xs-12" data-parsley-type="digits">
 				</div>
 			</div>
 
@@ -121,7 +121,7 @@
 				<label class="control-label col-md-4 col-sm-3 col-xs-12" for="Employers_Name">Employer`s Name   
 				</label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-					<input type="text" id="Employers_Name" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Employers_Name" required="required" class="form-control col-md-7 col-xs-12"  data-parsley-type="alphanum">
 				</div>
 			</div>
 
@@ -129,7 +129,7 @@
 				<label class="control-label col-md-4 col-sm-3 col-xs-12" for="Employers_Address">Employer`s Address  
 				</label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-					<input type="text" id="Employers_Address" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Employers_Address" required="required" class="form-control col-md-7 col-xs-12" >
 				</div>
 			</div>
 
@@ -137,12 +137,12 @@
 				<label class="control-label col-md-4 col-sm-6 col-xs-12" for="Supervisors_Name">Supervisor`s Name 
 				</label>
 				<div class="col-md-2 col-sm-5 col-xs-12">
-					<input type="text" id="Supervisors_Name" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Supervisors_Name" required="required" class="form-control col-md-7 col-xs-12"  data-parsley-type="alphanum">
 				</div>
 				<label class="control-label col-md-2 col-sm-3 col-xs-12" for="Supervisors_Phone">Supervisor`s Phone  
 				</label>
 				<div class="col-md-2 col-sm-6 col-xs-12">
-					<input type="text" id="Supervisors_Phone" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Supervisors_Phone" required="required" class="form-control col-md-7 col-xs-12" >
 				</div>
 			</div>
 							
@@ -150,7 +150,7 @@
 				<label class="control-label col-md-4 col-sm-6 col-xs-12" for="Supervisors_Title">Supervisor`s Title 
 				</label>
 				<div class="col-md-2 col-sm-5 col-xs-12">
-					<input type="text" id="Supervisors_Title" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="Supervisors_Title" required="required" class="form-control col-md-7 col-xs-12"  data-parsley-type="alphanum">
 				</div>
 				<label class="control-label col-md-2 col-sm-3 col-xs-12" for="Supervisors_Email">Supervisor`s E-mail  
 				</label>
@@ -200,7 +200,7 @@
 				<label class="control-label col-md-4 col-sm-6 col-xs-12" for="ext_su_name">External Supervisor`s Name 
 				</label>
 				<div class="col-md-2 col-sm-5 col-xs-12">
-					<input type="text" id="ext_su_name" required="required" class="form-control col-md-7 col-xs-12">
+					<input type="text" id="ext_su_name" required="required" class="form-control col-md-7 col-xs-12"  data-parsley-type="alphanum">
 				</div>
 				<label class="control-label col-md-2 col-sm-3 col-xs-12" for="date">Date  
 				</label>
@@ -219,11 +219,14 @@
 				<div class="col-md-1 col-sm-6 col-xs-12"></div>
 				<button class="btn btn-success col-md-2 col-sm-6 col-xs-12" type="submit" id="submit_form1">Submit</button>
 			</div>
-		</div>
+		<!-- </div> -->
 
 </form>
-
+<script src="vendors/parsleyjs/dist/parsley.min.js"></script>
 <script src="build/js/form1.js"></script>
+<script src="vendors/validator/validator.js"></script>
+<!-- Parsley validator -->
+
 
 </body>
 

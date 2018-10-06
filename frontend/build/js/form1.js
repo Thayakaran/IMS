@@ -26,6 +26,11 @@ $("#submit_form1").click(function (event) {
     formdata.ext_su_name = $("#ext_su_name").val();
     formdata.date = $("#date").val();
 
+    if (formdata.st_id == "" || formdata.st_name == "" || formdata.st_address == "" || formdata.st_h_phone == "" || formdata.st_m_phone == "" || formdata.st_emails == "" || formdata.st_semester == "" || formdata.st_year == "" || formdata.st_cgpa == "" || formdata.e_name == "" || formdata.e_address == "" || formdata.int_start_date == ""  || formdata.int_end_date == "" || formdata.hrs_per_week == "" || formdata.expected_task == "" || formdata.st_h_phone == "" || formdata.st_h_phone == "" || formdata.st_h_phone == "" || formdata.st_h_phone == "") {
+        swal({title:"Error", text:"All field are required", type:"error"});
+        return;
+    }
+
     $.ajax({
         url: '/form1',
         contentType:"application/json; charset=utf-8",
