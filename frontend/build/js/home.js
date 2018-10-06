@@ -16,9 +16,7 @@ $(document).ready(function(){
 
      //form 3 
      $('.form_I_3').click(function () {
-        $("#forms").load('form3.html', function() {
-            $.getScript('/build/js/form3.js');
-       });
+        $("#forms").load('form3.html')
     });
 
     //form 5

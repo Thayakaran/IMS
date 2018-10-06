@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="frontend/production/images/favicon.ico" type="image/ico" />
+	<link rel="icon" href="production/images/favicon.png" type="image/ico" />
 
 	<title>Form 3</title>
 
@@ -28,17 +28,10 @@
     text-align: center;  
  }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $('#addMore').on('click', function() {
-               $("#tb tr:eq(1)").clone(true).appendTo("#tb");
-              data.find("input").val('');
-     });
-                                    
-    
-});
-</script>
+<script src="production/js/jquery.min.js"></script>
+<script src="production/js/sweetalert2.all.min.js"></script>
+
+
 </head>
 <body>
 <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">	
@@ -98,12 +91,7 @@ $(document).ready(function(){
             </div>
 </div>
 
-<div>
-        <p class="control-label col-md-11 col-sm-5 col-xs-12">*Use comma (,) to seperate multiple e-mail address providing both company e-mail and personal e-mail
-        </p>
-       </div>
-
-       <div class="form-group">
+<div class="form-group">
             <label class="control-label col-md-3 col-sm-5 col-xs-12" for="first-name">Internship Information
             </label>
             </div>
@@ -135,10 +123,10 @@ $(document).ready(function(){
                 </div>
 
                 <div  class="form-group">
-                    <label class="control-label col-md-3 col-sm-6 col-xs-12" for="Supervisor`s Name">External Supervisor` Name
+                    <label class="control-label col-md-3 col-sm-6 col-xs-12" for="SuName">Supervisor Name
                     </label>
                     <div class="col-md-3 col-sm-6 col-xs-12">
-                        <input type="text" id="Supervisor`s Name" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="SuName" required="required" class="form-control col-md-7 col-xs-12">
                     </div>
                 </div>
 
@@ -162,7 +150,7 @@ $(document).ready(function(){
             <label class="control-label col-md-3 col-sm-6 col-xs-12" for="Tparty">Training Party 
             </label>
             <div class="col-md-8 col-sm-6 col-xs-12">
-                <input type="text" id="jTitle" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="Tparty" required="required" class="form-control col-md-7 col-xs-12">
             </div>
         </div>
 
@@ -317,6 +305,6 @@ $(document).ready(function(){
 
 </form>
 
-<script src="build/js/form1.js"></script>
+<script src="build/js/form3.js"></script>
 </body>
 </html>
