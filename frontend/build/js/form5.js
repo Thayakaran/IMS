@@ -94,10 +94,7 @@ $("#submit_form5").click(function (event) {
         externalSupervisorName : $("#externalSupervisorName").val(),
         date : $("#date").val()
     };
-
-    console.log(formdata);
-
-    alert($("input:checkbox[name='overall']:checked").val());
+    
     $.ajax({
         url: '/form5',
         contentType:"application/json; charset=utf-8",
