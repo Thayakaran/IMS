@@ -1,33 +1,102 @@
 
-$("#submit_form1").click(function (event) {
+$("#submit_form5").click(function (event) {
     event.preventDefault();
-    var formdata = {};
-
-    formdata.st_id = $("#sId").val();
-    formdata.st_name = $("#sName").val();
-    formdata.st_address = $("#Address").val();
-    formdata.st_h_phone = $("#Home_Phone").val();
-    formdata.st_m_phone = $("#Mobile_Phone").val();
-    formdata.st_emails = $("#st_Email_Address").val();
-    formdata.st_semester = $("#Semester").val();
-    formdata.st_year = $("#Year").val();
-    formdata.st_cgpa = $("#CGPA").val();
-    formdata.e_name = $("#Employers_Name").val();
-    formdata.e_address = $("#Employers_Address").val();
-    formdata.su_name = $("#Supervisors_Name").val();
-    formdata.su_phone = $("#Supervisors_Phone").val();
-    formdata.su_title = $("#Supervisors_Title").val();
-    formdata.su_email = $("#Supervisors_Email").val();
-    formdata.int_start_date = $("#s_date").val();
-    formdata.int_end_date = $("#e_date").val();
-    formdata.hrs_per_week = $("#hrs").val();
-    formdata.expected_task = $("#exp_task").val();
-    formdata.learning_outcome = $("#loc").val();
-    formdata.ext_su_name = $("#ext_su_name").val();
-    formdata.date = $("#date").val();
+    alert($("input:checkbox[name='table1[1][]']:checked").val());
+    var formdata = {
+        studentId = $("#studentId").val(),
+        studentName = $("#studentname").val(),
+        employeerName = $("#employername").val(),
+        SupervisorName = $("#supervisorname").val(),
+        contractVariation = $("#contractVariation").val(),
+        performance: {
+            volumeOfWork: {
+                                status = $("input:checkbox[name='table1[1][]']:checked").val(),
+                                note = $("#t1CEO1").val()
+                            },
+            qualityOfWork: {
+                                status = $("input:checkbox[name='table1[2][]']:checked").val(),
+                                note = $("#t1CEO2").val()
+                            },
+            analyticalAbility: {
+                                status = $("input:checkbox[name='table1[3][]']:checked").val(),
+                                note = $("#t1CEO3").val()
+                            },
+            abilityToResolveProblems: {
+                                status = $("input:checkbox[name='table1[4][]']:checked").val(),
+                                note = $("#t1CEO4").val()
+                            },
+            accuracyAndThroughness: {
+                                status = $("input:checkbox[name='table1[5][]']:checked").val(),
+                                note = $("#t1CEO5").val()
+                            },
+            abilityToWorkUnderPressure: {
+                                status = $("input:checkbox[name='table1[6][]']:checked").val(),
+                                note = $("#t1CEO6").val()
+                            },
+            oralCommunications: {
+                                status = $("input:checkbox[name='table1[7][]']:checked").val(),
+                                note = $("#t1CEO7").val()
+                            },
+            writtenCommunications: {
+                                status = $("input:checkbox[name='table1[8][]']:checked").val(),
+                                note = $("#t1CEO8").val()
+                            },
+            originalAndCriticalThinking: {
+                                status = $("input:checkbox[name='table1[9][]']:checked").val(),
+                                note = $("#t1CEO9").val()
+                            },
+            abilityToLearn: {
+                                status = $("input:checkbox[name='table1[10][]']:checked").val(),
+                                note = $("#t1CEO10").val()
+                            }				        
+        },
+        workHabbit:{
+            effectiveInOrganizingWork: {
+                                status = $("input:checkbox[name='table2[1][]']:checked").val(),
+                                note = $("#t2CEO1").val()
+                            },
+            takesTheInitiative: {
+                                status = $("input:checkbox[name='table2[2][]']:checked").val(),
+                                note = $("#t2CEO2").val()
+                            },
+            flexibleToNonRoutineWork: {
+                                status = $("input:checkbox[name='table2[3][]']:checked").val(),
+                                note = $("#t2CEO3").val()
+                            },
+            activeAndAlert: {
+                                status = $("input:checkbox[name='table2[4][]']:checked").val(),
+                                note = $("#t2CEO4").val()
+                            },
+            attitudeTwardOrganization: {
+                                status = $("input:checkbox[name='table2[5][]']:checked").val(),
+                                note = $("#t2CEO5").val()
+                            },
+            teamPlayer: {
+                                status = $("input:checkbox[name='table2[6][]']:checked").val(),
+                                note = $("#t2CEO6").val()
+                            },
+            diligenceAndPerseverance: {
+                                status = $("input:checkbox[name='table2[7][]']:checked").val(),
+                                note = $("#t2CEO7").val()
+                            },
+            acceptsResponsibility: {
+                                status = $("input:checkbox[name='table2[8][]']:checked").val(),
+                                note = $("#t2CEO8").val(),
+                            }    
+        },
+        personalCharacter = $("#personalCharacter").val(),
+        professionalCharacter = $("#professionalCharacter").val(),
+        effectivenessOfInternship = $("#effectivenessOfInternship").val(),
+        internshipSuggestion = $("#internshipSuggestion").val(),
+        accadamicSuggestion = $("#accadamicSuggestion").val(),
+        otherComments = $("#otherComments").val(),
+        overallPerformance = $("input:checkbox[name='overall']:checked").val(),
+        externalSupervisorName = $("#externalSupervisorName").val(),
+        date = $("#date").val()
+    }
 
     $.ajax({
-        url: '/form1',
+        url: '/form5',
         contentType:"application/json; charset=utf-8",
         data:JSON.stringify(formdata),
         type:'POST',
