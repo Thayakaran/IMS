@@ -6,10 +6,12 @@ const Form5Schema = mongoose.model('form5');
 
 
 module.exports.submit_form5 = function (form5, callback) {
+    //validate in backen weather the studentID is passed or not
     if (form5.studentId == undefined){
         callback(null, "All Fields Are Required");
         return;
     }
+    //preparing schema
     let newForm5Schema = new Form5Schema({
 
         studentId: form5.studentId,
@@ -104,11 +106,12 @@ module.exports.submit_form5 = function (form5, callback) {
         date: form5.date
 
     });
+    //saving schema to DB
     newForm5Schema.save(function (err, data) {
         if (err){
             callback(err);
             return;
         }
-        callback(null, "Successfully Submited");
+        callback(null, "Successfully Submited"); //callback message when it is success
     });
 }

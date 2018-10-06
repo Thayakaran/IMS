@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 $("#submit_form5").click(function (event) {
     event.preventDefault();
+    //preparing form data to send POST request
     var formdata = {
         studentId : $("#studentId").val(),
         studentName : $("#studentname").val(),
@@ -94,7 +95,8 @@ $("#submit_form5").click(function (event) {
         externalSupervisorName : $("#externalSupervisorName").val(),
         date : $("#date").val()
     };
-    
+
+    //ajax call to save form 5b in db
     $.ajax({
         url: '/form5',
         contentType:"application/json; charset=utf-8",
@@ -113,6 +115,7 @@ $("#submit_form5").click(function (event) {
     });
 });
 
+//cancel button navigates to home page
 $("#cancelbutton").click(function (event) {
     location.href = "home.html";
 });
