@@ -9,6 +9,7 @@ const route_registgration = require("./backend/Registration/router_registration"
 const route_login = require("./backend/Login/router_login");
 const route_form1 = require("./backend/Form_1/routes");
 const form3_routes = require("./backend/Form_3/routes");
+const route_form5 = require("./backend/Form_5/routes");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(route_registgration);
 app.use(route_login);
 app.use(route_form1);
 app.use(form3_routes);
+app.use(route_form5);
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
