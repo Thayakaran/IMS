@@ -94,7 +94,17 @@ $("#submit_form5").click(function (event) {
         overallPerformance : $("input:checkbox[name='overall']:checked").val(),
         externalSupervisorName : $("#externalSupervisorName").val(),
         date : $("#date").val()
+
+
+        
+
+
     };
+
+    if (formdata.studentId == "" || formdata.studentName == "" || formdata.employeerName == "" || formdata.SupervisorName == "" || formdata.contractVariation == "" || formdata.personalCharacter == "" || formdata.professionalCharacter == "" || formdata.effectivenessOfInternship == "" || formdata.internshipSuggestion == "" || formdata.accadamicSuggestion == "" || formdata.overallPerformance == "" || formdata.externalSupervisorName == ""  || formdata.performance.volumeOfWork.status == "" ) {
+        swal({title:"Error", text:"All field are required", type:"error"});
+        return;
+    }
 
     //ajax call to save form 5b in db
     $.ajax({
