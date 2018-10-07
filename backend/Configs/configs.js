@@ -3,3 +3,4 @@ module.exports.port = process.env.PORT || 3000;
 module.exports.salt = "@FFS1234@";
 module.exports.merchant = "10010";
 module.exports.key = "password1234";
+module.exports.domain = process.env.DOMAIN || "http://localhost:"+this.port;

@@ -3,9 +3,10 @@ const functions = require('./functions');
 
 const router = express.Router();
 
-router.post('/form1', function (req, res) {
+//router post for form 5 data
+router.post('/form5', function (req, res) {
 
-    functions.submit_form1(req.body, function (err, data) {
+    functions.submit_form5(req.body, function (err, data) {
         if (!err){
             res.status(200).send({"success":data});
         }

@@ -27,14 +27,14 @@ app.use(route_form5);
 app.use(route_form7);
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(configs.port, function(err) {
-    if (err) {
-        console.error(err);
-        return;
-    }
+  if (err) {
+    console.error(err);
+    return;
+  }
 
-    console.log("Listening on port " + configs.port);
+  console.log("Listening on port " + configs.port);
 });

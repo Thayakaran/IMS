@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "devServer": "webpack-dev-server --mode development",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "dev": "nodemon --watch src server.js"
   },
   "repository": {
     "type": "git",
@@ -28,14 +29,18 @@
     "react-dom": "^16.3.0",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.1",
+    "nodemon": "^1.18.4"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.4",
     "crypto": "^1.0.1",
     "express": "^4.16.3",
+    "md5": "^2.2.1",
     "mongoose": "^5.1.4",
+    "mustache": "^3.0.0",
+    "nodemailer": "^4.6.8",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "request": "^2.88.0",
