@@ -39,6 +39,8 @@
     "express": "^4.16.3",
     "md5": "^2.2.1",
     "mongoose": "^5.1.4",
+    "mustache": "^3.0.0",
+    "nodemailer": "^4.6.8",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "request": "^2.88.0",
