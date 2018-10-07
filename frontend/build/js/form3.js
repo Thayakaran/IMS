@@ -5,9 +5,9 @@ $(document).ready(function () {
     $("#sId").val(stu_ID);
 
     ajaxGetStudentDetails(stu_ID);
-
+    //To load data to the table
     loadTableData();
-
+    //To check the data entry status
     checkMonth1();
 
     checkMonth2();
@@ -54,7 +54,7 @@ $(document).ready(function () {
             }
         });
     }
-
+    //To add training details to the database
     $('#TraningAdd').click(function (event) {
         event.preventDefault();
 
@@ -154,7 +154,7 @@ $(document).ready(function () {
         });
 
     }
-
+    //Check weather the fields are filled or not
     function checkMonth1() {
 
         $.ajax({
@@ -224,7 +224,7 @@ $(document).ready(function () {
         });
 
     }
-
+    //Function to eset all the data
     function reset() {
 
         $('#demo-form2')[0].reset();
