@@ -48,3 +48,19 @@ module.exports.sendMailForgotPassword = function(email, resetlink){
 
     this.sendMail(output, email, "there", "Password Reset Request")
 }
+
+
+module.exports.sendSupervisorApprovedMail = function(email, studentName, StudentID){
+    let template = fs.readFileSync(__dirname+"/templateSupervisorApproved.html","utf-8");
+    let templateOptions = {studentName: studentName, studentID: StudentID};
+    let output = mustache.render(template, templateOptions);
+
+    this.sendMail(output, email, "there", "Supervisor Approved")
+}
+module.exports.sendSupervisorRejectedMail = function(email, employer, supervisorName, supervisorEmail){
+    let template = fs.readFileSync(__dirname+"/templateSupervisorRejected.html","utf-8");
+    let templateOptions = {supervisorEmail: supervisorEmail};
+    let output = mustache.render(template, templateOptions);
+
+    this.sendMail(output, email, "there", "Supervisor Rejected")
+}

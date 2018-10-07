@@ -1,6 +1,7 @@
 const mongoose = require('../Configs/DBSchema_form1');
 const configs = require('../Configs/configs');
-
+const emailVerification = require('../EmailVerification/functions');
+const email = require('../Common/functions');
 const Form1Schema = mongoose.model('form1');
 
 
@@ -11,7 +12,6 @@ module.exports.submit_form1 = function (form1, callback) {
         return;
     }
     let newForm1Schema = new Form1Schema({
-
         st_id:form1.st_id,
         st_name:form1.st_name,
         st_address:form1.st_address,
@@ -40,6 +40,20 @@ module.exports.submit_form1 = function (form1, callback) {
             callback(err);
             return;
         }
+        student = {
+            studentID: form1.st_id,
+            employer: form1.e_name,
+            supervisorName: form1.su_name,
+            studentEmail: form1.st_emails,
+            supervisorEmail: form1.su_email,
+        };
+        emailVerification.addVerificationCode(student, function (err, out) {
+            if (!err){
+                let accept = configs.domain + /verification/ + out + "/approved";
+                let reject = configs.domain + /verification/ + out + "/rejected";
+                email.sendMailSupervisorApproval(form1.st_name, form1.st_id, form1.su_email, form1.su_name, accept, reject);
+            }
+        });
         callback(null, "Successfully Submited");
     });
 }
