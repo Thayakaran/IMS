@@ -11,6 +11,7 @@ const route_form1 = require("./backend/Form_1/routes");
 const form3_routes = require("./backend/Form_3/routes");
 const emailVerificationRoute = require("./backend/EmailVerification/routes");
 const route_form5 = require("./backend/Form_5/routes");
+const route_form7 = require("./backend/Form_7/routes");
 const app = express();
 
 app.use(cors());
@@ -23,6 +24,7 @@ app.use(route_form1);
 app.use(form3_routes);
 app.use(emailVerificationRoute);
 app.use(route_form5);
+app.use(route_form7);
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
