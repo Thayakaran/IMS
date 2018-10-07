@@ -1,3 +1,4 @@
+$(document).ready(function() {
 
 $("#submit_form1").click(function (event) {
     event.preventDefault();
@@ -51,4 +52,6 @@ $("#submit_form1").click(function (event) {
 
 $("#cancelbutton").click(function (event) {
     location.href = "home.html";
+});
+
 });
